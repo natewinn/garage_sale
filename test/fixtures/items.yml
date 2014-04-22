@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_name: MyString
+  item_price: 9.99
+  item_age: 1
+  item_sold: false
+
+two:
+  item_name: MyString
+  item_price: 9.99
+  item_age: 1
+  item_sold: false

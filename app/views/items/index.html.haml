@@ -1,0 +1,14 @@
+%h1 These are my items for sale!
+%a{:href=> "/items/new"} Add a New Item
+%hr
+
+- @item.each do |i|
+	%li= "Item Name: #{i.item_name}"
+	%li= "Item Price: #{i.item_price}"
+	%li= "Item Age: #{i.item_age}"
+	%li= "Availible for Purchase: #{i.item_sold}"
+	%button=link_to "Update Item", "/items/#{i.id}/edit"
+	= form_for i, url: "/items/#{i.id}", :method => "put" do |f|
+		= f.hidden_field :item_sold, :value => "true"
+		= f.submit "Mark Sold"
+	%hr

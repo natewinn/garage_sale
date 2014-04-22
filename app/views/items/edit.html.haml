@@ -1,0 +1,5 @@
+= form_for @item, url: "/items/#{@item.id}" do |f|
+	= render"forms", f: f
+
+%button=link_to "delete", "/items/#{@item.id}", {:action => "delete", :method => :delete}
+%button=link_to "return", "/items"
